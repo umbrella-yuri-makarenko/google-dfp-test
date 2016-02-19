@@ -1,0 +1,58 @@
+.navbar-brand {
+    padding: 0;
+}
+
+.post {
+    margin-bottom: 20px;
+}
+.post .image img{
+    width: 100%;   
+}
+
+.category {
+    margin-bottom: 30px;
+}
+
+.article-detail {
+    margin-bottom: 30px;
+}
+
+.article-detail .image {
+    text-align: center;
+}
+
+.article-detail .image img {
+    max-width: 100%;
+}
+
+.article-detail .byline {
+    margin: 10px 0;
+}
+
+.article-detail .content img {
+    max-width: 100%;
+    height: auto;
+}
+
+#ad-middle {
+    width: 300px;
+    height: 1050px;
+    background-color: #F5F5F5;
+    text-align: center;
+}
+#ad-middle p {
+    font-size: 23px;
+    padding-top: 420px;
+}
+
+#ad-top {
+    width: 970px;
+    height: 250px;
+    background-color: #F5F5F5;
+    text-align: center;
+    margin: 0 auto;
+}
+#ad-top p {
+    font-size: 23px;
+    padding-top: 78px;
+}

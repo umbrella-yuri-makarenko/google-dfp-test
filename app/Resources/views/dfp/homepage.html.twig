@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Homepage | Test Google DFP{% endblock %}
+
+{% block body %}
+    <div id="ad-top">
+        <p>
+            <b>TOP AD</b>
+            <br>
+            728x90 or 970x90 or 970x250
+        </p>
+    </div>
+    
+    <h1 class="page-header">Google DFP Test <small>homepage</small></h1>
+    <div class="row">
+        <div class="col-md-8">
+            {% for post in posts %}
+            <div class="row post">
+                <div class="col-md-4 image">
+                    <a href="{{ path('article', {category: post.category, article: post.slug}) }}">
+                        <img src="{{ post.image }}" />
+                    </a>
+                </div>
+                <div class="col-md-8">
+                    <h4><a href="{{ path('article', {category: post.category, article: post.slug}) }}">{{ post.title }}</a></h4>
+                    <p>{{ post.description | raw }}</p>
+                    <p>
+                        <span><b>Category: </b><a href="{{ path('category', { category: post.category }) }}"><span class="label label-primary">{{ post.category }}</span></a></span>
+                        <span><b>Published: </b><span class="label label-primary">{{ post.published|date("Y-m-d H:i:s") }}</span></span>
+                    </p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="col-md-4">
+            <div id="ad-middle">
+                <p>
+                    <b>AD IN SIDEBAR</b>
+                    <br>
+                    <br>
+                    300x250<br>
+                    or<br>
+                    300x600<br>
+                    or<br>
+                    300x1050
+                </p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

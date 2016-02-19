@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Article {{ post.title }} | Test Google DFP{% endblock %}
+
+{% block body %}
+    <div id="ad-top">
+        <p>
+            <b>TOP AD</b>
+            <br>
+            728x90 or 970x90 or 970x250
+        </p>
+    </div>
+
+    <h1 class="page-header">{{ post.title }}</h1>
+    
+    <div class="row article-detail">
+        <div class="col-md-8">
+            <div class="">
+                <div class="row">
+                    <div class="col-md-12 image">
+                        <img src="{{ post.image }}" />
+                    </div>
+                </div>
+                <p class="byline">
+                    <span><b>Category: </b><a href="{{ path('category', { category: post.category }) }}"><span class="label label-primary">{{ post.category }}</span></a></span>
+                    <span><b>Published: </b><span class="label label-primary">{{ post.published|date("Y-m-d H:i:s") }}</span></span>
+                </p>
+                <hr>
+                <div class="row">
+                    <div class="col-md-offset-2 col-md-8 content">
+                        <div class="well well-sm">{{ post.content | raw }}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div id="ad-middle">
+                <p>
+                    <b>AD IN SIDEBAR</b>
+                    <br>
+                    <br>
+                    300x250<br>
+                    or<br>
+                    300x600<br>
+                    or<br>
+                    300x1050
+                </p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

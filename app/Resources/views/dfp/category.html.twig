@@ -3,13 +3,7 @@
 {% block title %}Category {{ category }} | Test Google DFP{% endblock %}
 
 {% block body %}
-    <div id="ad-top">
-        <p>
-            <b>TOP AD</b>
-            <br>
-            728x90 or 970x90 or 970x250
-        </p>
-    </div>
+    {% include 'ad/top.html.twig' %}
     
     <h1 class="page-header">{{ category }} <small>category</small></h1>
     <div class="row category">
@@ -33,18 +27,7 @@
             {% endfor %}
         </div>
         <div class="col-md-4">
-            <div id="ad-middle">
-                <p>
-                    <b>AD IN SIDEBAR</b>
-                    <br>
-                    <br>
-                    300x250<br>
-                    or<br>
-                    300x600<br>
-                    or<br>
-                    300x1050
-                </p>
-            </div>
+            {% include 'ad/middle.html.twig' %}
         </div>
     </div>
 {% endblock %}
